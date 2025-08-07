@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-1. [Introduction](./documentation/introduction)
+1. [Introduction](./documentation/introduction.md)
     - What is kafka and why we need it?
     - Kafka components and Internal Architecture
     - Different ways to install kafka
