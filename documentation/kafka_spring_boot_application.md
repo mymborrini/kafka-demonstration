@@ -57,19 +57,10 @@ Consider that by default when you run your consumer, it will consumer only the m
 
 So in this case you have the following situation in consumer group: skynet-group-1
 
-![img.png](./images/kafka_spring_boot_application/consumer_partitions_offset.png)
-
-Where the partition 0 has an *offset* set to 1, which means the partition contains 1 message, BUT an *end* set to 0. This means that the message inside was created before the registration of the consumer and in general the consumer didn't consume it
-Instead in partition 2 has an *offset* set to 1, which means the partition contains 1 message, AND an *end* set to 1. This means that the message inside was consumed by the consumer.
-
-So everytime the *offset* and the *end* are aligned the consumer consumes all the message. 
-There is also another field, the *lag* field. It shows you how many messages your consumer still needs to consume. As you can see even the partition 0 has 0 *lag*. The reason is that the message is created before the registration of the consumer.
-If now I close the consumer, and add a message by run one of the `http/kafka-producer.http`. The *lag* of the consumer still remains to 0. Because the consumer is down.
-
-When I start the application again the consumer will consume the message immediately
-and the offset of the partition0 is set to 2
 
 ### Kafka Consumer Scenario – Latest Offset Behavior
+
+![img.png](./images/kafka_spring_boot_application/consumer_partitions_offset.png)
 
 #### Step-by-step scenario
 
