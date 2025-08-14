@@ -1,0 +1,23 @@
+### GET request with parameter 1
+GET http://localhost:9191/producer-app/publish/HelloWorld
+Accept: application/json
+
+### GET request with parameter 2
+GET http://localhost:9191/producer-app/publish/welcome
+Accept: application/json
+
+### GET request with parameter 3
+GET http://localhost:9191/producer-app/publish/ssd
+Accept: application/json
+
+### GET request with parameter 4
+GET http://localhost:9191/producer-app/publish/ram
+Accept: application/json
+
+### GET request with parameter 5
+GET http://localhost:9191/producer-app/publish/hdd
+Accept: application/json
+
+### GET request produce batch for topic 2
+GET http://localhost:9191/producer-app/publish/batch
+Accept: application/json
